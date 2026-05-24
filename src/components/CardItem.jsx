@@ -1,4 +1,6 @@
-export default function Card({title, priceannually, pricemonthly, Gigabytes, UserAllowed, SendUpTo}){
+
+
+export default function CardItem({title, priceannually, pricemonthly, Gigabytes, UserAllowed, SendUpTo}){
     return (
         <div className="card">
             <h2>{title}</h2>

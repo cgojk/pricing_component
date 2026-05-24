@@ -1,4 +1,8 @@
-export default function Home (){
+import React from 'react';
+import Card from '../components/Card';
+
+
+export default function home (){
     return (
         <section className="Pricing">
              <div className="toggle">
@@ -11,7 +15,7 @@ export default function Home (){
 
              </div>
                 
-
+<Card />
 
         </section>
     )
