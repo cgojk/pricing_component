@@ -5,38 +5,33 @@
 @import "@fontsource/montserrat/800.css";
 
 :root {
-  --font-primary: "Montserrat", sans-serif;
+  --font-primary: "Montserrat", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
- /* TEXT PRESENT 1 */
-  --text-present-1-size: clamp(3rem, 5vw, 4.5rem); /* 48px → 72px */
-  --text-present-1-line: 1;
-  --text-present-1-spacing: -0.125rem; /* -2px */
+  /* TEXT PRESENT 1 */
+  --font-1: 700 clamp(3rem, 5vw, 4.5rem)/1 var(--font-primary);
+  --font-1-spacing: -0.125rem;
 
   /* TEXT PRESENT 2 */
-  --text-present-2-size: clamp(2rem, 3.5vw, 2.5rem); /* 32px → 40px */
-  --text-present-2-line: 1.25;
-  --text-present-2-spacing: 0;
+  --font-2: 700 clamp(2rem, 3.5vw, 2.5rem)/1.25 var(--font-primary);
+  --font-2-spacing: 0;
 
   /* TEXT PRESENT 3 */
-  --text-present-3-size: clamp(1.5rem, 3vw, 2rem); /* 24px → 32px */
-  --text-present-3-line: 1.25;
-  --text-present-3-spacing: 0;
+  --font-3: 600 clamp(1.5rem, 3vw, 2rem)/1.25 var(--font-primary);
+  --font-3-spacing: 0;
 
   /* TEXT PRESENT 4 */
-  --text-present-4-size: clamp(0.95rem, 1.5vw, 1rem); /* 15px → 16px */
-  --text-present-4-line: 1.55;
-  --text-present-4-spacing: 0;
+  --font-4: 500 clamp(0.95rem, 1.5vw, 1rem)/1.55 var(--font-primary);
+  --font-4-spacing: 0;
 
   /* TEXT PRESENT 5 */
-  --text-present-5-size: clamp(0.875rem, 1.3vw, 0.9375rem); /* 14px → 15px */
-  --text-present-5-line: 1.85;
-  --text-present-5-spacing: 0;
+  --font-5: 500 clamp(0.875rem, 1.3vw, 0.9375rem)/1.85 var(--font-primary);
+  --font-5-spacing: 0;
 
   /* TEXT PRESENT 6 */
-  --text-present-6-size: clamp(0.75rem, 1vw, 0.8125rem); /* 12px → 13px */
-  --text-present-6-line: 1.25;
-  --text-present-6-spacing: 0.09375rem; /* 1.5px */
-
+  --font-6: 700 clamp(0.75rem, 1vw, 0.8125rem)/1.25 var(--font-primary);
+  --font-6-spacing: 0.09375rem;
 
 //   colors
 
@@ -52,6 +47,7 @@
 --gradient-1: linear-gradient(90deg, hsl(237,73%,79%) 0%, hsl(238,63%,64%) 100%);
 
 // spacing
+--spacing-50: 0.25rem; /* 4px */
 --spacing-100: 0.5rem; /* 8px */
 --spacing-200: 1rem; /* 16px */
 --spacing-300: 1.5rem; /* 24px */

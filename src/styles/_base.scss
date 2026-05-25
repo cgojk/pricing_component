@@ -1,0 +1,214 @@
+// ===========utility styles==========================
+/* Custom Properties */
+
+/* Set core body defaults */
+body {
+   min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background:var(--clr-blue-200);
+  font:var(--font-6);
+
+}
+
+.card{
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+    padding: var(--spacing-400);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+     transition: box-shadow 0.3s ease;
+     text-align: center;
+    display:flex;
+    flex-direction: column;
+    border:1px solid var(--clr-white);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     cursor:pointer;
+     
+
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+
+     .btn{
+        margin-top: var(--spacing-200);
+        padding: var(--spacing-100) var(--spacing-200);
+        background: var(--gradient-1);
+        color: var(--clr-white);
+        border-radius: 0.25rem;
+       
+        text-transform:uppercase;
+        font:var(--font-6);
+        cursor:pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+    
+            &:hover {
+                background: var(--clr-white);
+                color: var(--clr-blue-500);
+                }
+    }
+    
+   .title{
+        font:var(--font-4);
+        color: var(--clr-gray-700);
+    }
+   
+.info{
+    display:flex;
+    flex-direction: column;
+    gap: var(--spacing-50);
+     margin-top: var(--spacing-200);
+     text-align: center;
+
+    .storage,
+     .users,
+      .send{
+        font:var(--font-4);
+        color: var(--clr-gray-700);
+        margin: var(--spacing-100) 0;
+        border-top:0.5px solid var(--clr-gray-650);
+        display:inline-block;
+        width:100%;
+        padding:var(--spacing-50) 0;
+       
+    }
+}
+    
+    
+}
+.price{
+    font:var(--font-1);
+    color: var(--clr-gray-700);
+    margin-bottom:var(--spacing-300);
+    // margin: var(--spacing-200) 0;
+}
+.card:nth-child(2){
+    border:2px solid var(--clr-blue-500);
+    background: var(--gradient-1);
+        .storage,
+        .users,
+        .send{
+            color: var(--clr-white);
+            border-color: var(--clr-white);
+            font:var(--font-4);
+        }
+        .title{
+        font:var(--font-4);
+        color: var(--clr-white);
+        }
+            .price{
+                color: var(--clr-white);
+            }
+            .btn{
+                background: var(--clr-white);
+                color: var(--clr-blue-500);
+
+            &:hover {
+             background: var(--clr-white);
+             color: var(--clr-blue-500);
+             }
+
+
+              
+        
+}
+
+}
+
+.cardItems{
+    display:flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    margin-top: var(--spacing-400);
+
+    
+   
+}
+
+//======================== toggle styles=================
+
+.pricing{
+    padding:var(--spacing-200);
+
+    .pricing-title{
+        font:var(--font-2);
+        color: var(--clr-gray-650);
+        text-align: center;
+        margin-bottom:var(--spacing-500);
+    }
+    .monthly,
+    .annually{
+        font:var(--font-6);
+        color: var(--clr-gray-650);
+    }
+}
+
+.toggle{  
+      display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: var(--spacing-200);
+    margin-top: var(--spacing-400);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:var(--gradient-1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--clr-white);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
