@@ -3,14 +3,32 @@
 
 /* Set core body defaults */
 body {
-   min-height: 100vh;
+  min-height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
-  background:var(--clr-blue-200);
-  font:var(--font-6);
+  background:var(--clr-blue-50);
+  font: var(--font-6);
 
+  background-image:
+    url("../images/bg-top.svg"),
+    url("../images/bg-bottom.svg");
+
+  background-repeat: no-repeat, no-repeat;
+
+  background-position:
+     right -50px top,
+  left -50px bottom;
 }
 
+// backgorudn images==========
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-200);
+}
 .card{
     background-color: var(--clr-white);
     border-radius: 0.5rem;
@@ -33,11 +51,11 @@ body {
 
      .btn{
         margin-top: var(--spacing-200);
-        padding: var(--spacing-100) var(--spacing-200);
+        padding: var(--spacing-200);
         background: var(--gradient-1);
         color: var(--clr-white);
         border-radius: 0.25rem;
-       
+       border-color: var(--clr-blue-500);
         text-transform:uppercase;
         font:var(--font-6);
         cursor:pointer;
@@ -84,7 +102,7 @@ body {
     // margin: var(--spacing-200) 0;
 }
 .card:nth-child(2){
-    border:2px solid var(--clr-blue-500);
+    border:1px solid var(--clr-blue-500);
     background: var(--gradient-1);
         .storage,
         .users,
@@ -103,10 +121,11 @@ body {
             .btn{
                 background: var(--clr-white);
                 color: var(--clr-blue-500);
+                 transition:background 0.3s ease, color 0.3s ease;
 
             &:hover {
-             background: var(--clr-white);
-             color: var(--clr-blue-500);
+             background: var(--gradient-1);
+             color: var(--clr-white);
              }
 
 
@@ -117,8 +136,8 @@ body {
 }
 
 .cardItems{
-    display:flex;
-    flex-direction: column;
+   display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-400);
     margin-top: var(--spacing-400);
 
@@ -130,7 +149,8 @@ body {
 
 .pricing{
     padding:var(--spacing-200);
-
+    
+    
     .pricing-title{
         font:var(--font-2);
         color: var(--clr-gray-650);
@@ -191,11 +211,11 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background: var(--gradient-1);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px var(--gradient-1);
 }
 
 input:checked + .slider:before {

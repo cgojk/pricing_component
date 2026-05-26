@@ -43,25 +43,19 @@ export default function Card(){
      console.log(isMonthly);
    
     return (
-        <section className="pricing">
-            <h1 className="pricing-title">Our Pricing</h1>
-
+    <section className="pricing ">
+        <h1 className="pricing-title">Our Pricing</h1>
         <div className="toggle">
-
-           
             <p className="monthly">Monthly</p>
             <label className="switch">
                 <input type="checkbox" onChange={handleToggleMonthly} />
                 <span className="slider round"></span>
-
             </label>
              <p className="annually">Annually</p>
        </div>
-
-        <div className="cardItems">
+        <div className="cardItems container">
             {isMonthly ? cardItemsMonthly : cardItemsAnnually}
         </div>
-       
-       </section>
+    </section>
     );
 }
